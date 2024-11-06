@@ -5,7 +5,7 @@ import Navbar from './Components/Navbar';
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className='font-Comfortaa'>
         <Routes>
           <Route path="/" element={<Navbar />} />
         </Routes>
