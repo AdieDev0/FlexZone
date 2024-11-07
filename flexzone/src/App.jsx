@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import Cards from './Components/Cards';
+import Meet from './Components/Meet';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Cards/>
+      <Meet/>
     </div>
   );
 }

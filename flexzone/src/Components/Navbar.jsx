@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import gym from "../assets/Logo.png";
 import {
   Drawer,
@@ -13,6 +14,12 @@ const Navbar = () => {
   const [openRight, setOpenRight] = React.useState(false);
   const openDrawerRight = () => setOpenRight(true);
   const closeDrawerRight = () => setOpenRight(false);
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
     <div className="lg:px-20 md:px-20 px-4 lg:py-4 md:py-4 py-2 w-auto lg:h-24 md:h-24 h-20 sticky z-50">
       <div className="flex justify-between items-center">
@@ -37,9 +44,14 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-5">
-          <button className="hidden lg:block md:block text-sm font-bold  bg-black px-6 py-3 rounded-md text-white hover:text-black hover:bg-gradient-to-r from-lime-500 via-yellow-500 to-orange-700 transition duration-300">
+        <motion.button 
+            variants={itemVariants}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="text-sm font-bold w-44 bg-black px-6 py-3 border border-white/50 rounded-md text-white hover:text-black hover:bg-gradient-to-r from-lime-500 via-yellow-500 to-orange-700 transition duration-300"
+          >
             Buy FlexZone
-          </button>
+          </motion.button>
           <MdOutlineShoppingCart className="size-6 cursor-pointer duration-100 hover:text-stone-600" />
           {/* MENU BURGER */}
           <HiOutlineMenuAlt4
