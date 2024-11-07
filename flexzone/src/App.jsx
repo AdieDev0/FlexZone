@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import Cards from './Components/Cards';
 import Meet from './Components/Meet';
+import HoverCards from './Components/HoverCards';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Hero />
       <Cards/>
       <Meet/>
+      <HoverCards/>
     </div>
   );
 }

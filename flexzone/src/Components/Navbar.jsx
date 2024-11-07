@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="lg:px-20 md:px-20 px-4 lg:py-4 md:py-4 py-2 w-auto lg:h-24 md:h-24 h-20 sticky z-50">
+    <div className="bg-white shadow-lg lg:px-20 md:px-20 px-4 lg:py-4 md:py-4 py-2 w-auto lg:h-24 md:h-24 h-20 sticky top-0 z-50">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
           <img src={gym} alt="/" className="size-16 cursor-pointer" />
