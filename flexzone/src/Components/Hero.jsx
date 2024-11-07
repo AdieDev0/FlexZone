@@ -1,6 +1,11 @@
 import React from "react";
 import fitness from "../assets/Fitness.mp4";
-
+import Marquee from "react-fast-marquee";
+import huff from "../assets/huffpost.png";
+import inc from "../assets/inc.png";
+import mens from "../assets/nsf.png";
+import wfj from "../assets/wsj.png";
+import cnn from "../assets/cnn.png";
 const Hero = () => {
   return (
     <div className="w-full overflow-hidden">
@@ -10,7 +15,7 @@ const Hero = () => {
           Your browser does not support the video tag.
         </video>
         {/* TEXT */}
-        <div className="absolute inset-0 top-16 md:top-20 lg:top-20 md:left-20 lg:left-20 left-10 items-center justify-center w-72 h-36 md:w-[700px] md:h-[200px] lg:w-[800px] lg:h-[250px] grid gap-5 md:gap-8 lg:gap-10">
+        <div className="absolute inset-0 top-16 md:top-20 lg:top-20 md:left-20 lg:left-20 left-10 items-center justify-center w-72 h-36 md:w-[700px] md:h-[200px] lg:w-[800px] lg:h-[250px] grid gap-5 md:gap-8z lg:gap-10">
           <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold">
             Empower Your Strength
           </h1>
@@ -24,7 +29,25 @@ const Hero = () => {
         </div>
       </div>
       {/* marquees */}
-      
+      <div className="bg-white py-3 md:py-5 lg:py-5">
+        <Marquee autoFill pauseOnHover>
+          <a href="https://www.huffpost.com/entry/the-wearables-of-summer_b_10280600" target="blank">
+            <img src={huff} alt="/" className="w-20 md:w-24 lg:w-32 mx-5 md:mx-8 lg:mx-10" />
+          </a>
+          <a href="https://www.inc.com/kate-l-harrison/this-light-emitting-wearable-can-boost-your-winter-productivity.html" target="blank">
+            <img src={inc} alt="/" className="w-20 md:w-24 lg:w-32 mx-5 md:mx-8 lg:mx-10" />
+          </a>
+          <a href="https://www.menshealth.com/technology-gear/g31249852/mens-health-sleep-awards-2020/?slide=31" target="blank">
+            <img src={mens} alt="/" className="w-20 md:w-24 lg:w-32 mx-5 md:mx-8 lg:mx-10" />
+          </a>
+          <a href="https://www.wsj.com/articles/how-to-cure-your-jet-lag-5-tools-to-outsmart-your-body-and-take-back-your-vacation-11672340432=" target="blank">
+            <img src={wfj} alt="/" className="w-20 md:w-24 lg:w-40 mx-5 md:mx-8 lg:mx-10" />
+          </a>
+          <a href="https://edition.cnn.com/travel/article/jet-lag-tips/index.html" target="blank">
+            <img src={cnn} alt="/" className="w-20 md:w-24 lg:w-32 mx-5 md:mx-8 lg:mx-10" />
+          </a>
+        </Marquee>
+      </div>
     </div>
   );
 };
