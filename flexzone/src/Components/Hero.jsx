@@ -4,7 +4,7 @@ import fitness from "../assets/Fitness.mp4";
 import Marquee from "react-fast-marquee";
 import huff from "../assets/huffpost.png";
 import inc from "../assets/inc.png";
-import mens from "../assets/nsf.png";
+import mens from "../assets/NSF.png";
 import wfj from "../assets/wsj.png";
 import cnn from "../assets/cnn.png";
 
