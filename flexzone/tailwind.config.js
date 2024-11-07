@@ -11,7 +11,6 @@ module.exports = withMT({
       fontFamily: {
         Comfortaa: ["comfortaa"],
       },
-      aspectRatio: { '1920/604': 'calc(604 / 1920)', },
     },
   },
   plugins: [],
