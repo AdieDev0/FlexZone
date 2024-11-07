@@ -1,5 +1,7 @@
+const withMT = require("@material-tailwind/react/utils/withMT");
 /** @type {import('tailwindcss').Config} */
-export default {
+
+module.exports = withMT({
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,8 +10,9 @@ export default {
     extend: {
       fontFamily: {
         Comfortaa: ["comfortaa"],
-      }
+      },
+      aspectRatio: { '1920/604': 'calc(604 / 1920)', },
     },
   },
   plugins: [],
-}
+});
