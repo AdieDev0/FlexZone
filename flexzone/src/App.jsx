@@ -7,6 +7,7 @@ import Meet from './Components/Meet';
 import HoverCards from './Components/HoverCards';
 import AnotherCards from './Components/AnotherCards';
 import Works from './Components/Works';
+import Research from './Components/Research';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <HoverCards/>
       <AnotherCards/>
       <Works/>
+      <Research/>
     </div>
   );
 }

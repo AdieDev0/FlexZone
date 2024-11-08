@@ -22,7 +22,7 @@ const Works = () => {
   };
 
   return (
-    <div className="bg-gray-100 p-6 md:p-12 lg:p-20">
+    <div className="bg-gradient-to-t from-white via-gray-200 to-gray-300 p-6 md:p-12 lg:p-20">
       <div>
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -148,7 +148,7 @@ const Works = () => {
             </div>
           </motion.div>
         </div>
-        <div className="flex justify-center items-center bg-gray-100">
+        <div className="flex justify-center items-center">
           <motion.button
             variants={itemVariants}
             whileHover={{ scale: 1.1 }}
