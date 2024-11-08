@@ -6,6 +6,7 @@ import Cards from './Components/Cards';
 import Meet from './Components/Meet';
 import HoverCards from './Components/HoverCards';
 import AnotherCards from './Components/AnotherCards';
+import Works from './Components/Works';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Meet/>
       <HoverCards/>
       <AnotherCards/>
+      <Works/>
     </div>
   );
 }
