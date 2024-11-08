@@ -9,6 +9,7 @@ import AnotherCards from './Components/AnotherCards';
 import Works from './Components/Works';
 import Research from './Components/Research';
 import Product from './Components/Product';
+import Footer from './Components/Footer';
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <Works/>
       <Research/>
       <Product/>
+      <Footer/>
     </div>
   );
 }
