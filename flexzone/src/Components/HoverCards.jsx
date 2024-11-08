@@ -6,7 +6,7 @@ import pic3 from "../assets/gympic2.jpg";
 
 const HoverCards = () => {
   return (
-    <div className="bg-gray-300 px-5 md:px-10 lg:px-32 py-20">
+    <div className="bg-gray-200 px-5 md:px-10 lg:px-32 py-20">
       <div className="text-center mb-10">
         <p className="font-extrabold text-sm mb-5">HOW IT WORKS</p>
         <h5 className="text-2xl md:text-3xl lg:text-5xl mx-auto w-full lg:w-[1000px]">

@@ -5,6 +5,7 @@ import Hero from './Components/Hero';
 import Cards from './Components/Cards';
 import Meet from './Components/Meet';
 import HoverCards from './Components/HoverCards';
+import AnotherCards from './Components/AnotherCards';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Cards/>
       <Meet/>
       <HoverCards/>
+      <AnotherCards/>
     </div>
   );
 }
