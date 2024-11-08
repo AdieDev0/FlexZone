@@ -16,6 +16,11 @@ const Works = () => {
     });
   }, [controls]);
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="bg-gray-100 p-6 md:p-12 lg:p-20">
       <div>
@@ -27,7 +32,7 @@ const Works = () => {
           How it works
         </motion.h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 mx-auto mb-10">
           {/* Box 1 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -142,6 +147,17 @@ const Works = () => {
               />
             </div>
           </motion.div>
+        </div>
+        <div className="flex justify-center items-center bg-gray-100">
+          <motion.button
+            variants={itemVariants}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="text-sm font-bold w-44 bg-black px-6 py-3 border border-white/50 rounded-md text-white hover:text-black hover:bg-gradient-to-r from-lime-500 via-yellow-500 to-orange-700 transition duration-300"
+          >
+            {" "}
+            Learn More{" "}
+          </motion.button>{" "}
         </div>
       </div>
     </div>
