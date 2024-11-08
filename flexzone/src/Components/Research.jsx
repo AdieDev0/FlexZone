@@ -35,7 +35,7 @@ const Research = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="w-full md:w-[800px] mx-auto text-black/70 text-sm mb-6 md:mb-10"
+          className="w-full md:w-[800px] mx-auto text-black/70 text-sm mb-6 md:mb-10 "
         >
           FlexZone is a science-driven gym concept guided by some of the world's
           foremost fitness experts and researchers. As pioneers in the field of
@@ -89,7 +89,7 @@ const Research = () => {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="shadow-lg p-5 rounded-2xl text-center"
+            className="shadow-md shadow-blue-200 p-5 rounded-2xl text-center"
           >
             <a href={item.href} target="blank">
               <img src={item.img} alt="" className="w-20 md:w-28 mx-auto mb-4" />

@@ -156,7 +156,7 @@ const Works = () => {
             className="text-sm font-bold w-44 bg-black px-6 py-3 border border-white/50 rounded-md text-white hover:text-black hover:bg-gradient-to-r from-lime-500 via-yellow-500 to-orange-700 transition duration-300"
           >
             {" "}
-            Learn More{" "}
+            Work With Us{" "}
           </motion.button>{" "}
         </div>
       </div>

@@ -8,6 +8,7 @@ import HoverCards from './Components/HoverCards';
 import AnotherCards from './Components/AnotherCards';
 import Works from './Components/Works';
 import Research from './Components/Research';
+import Product from './Components/Product';
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <AnotherCards/>
       <Works/>
       <Research/>
+      <Product/>
     </div>
   );
 }
