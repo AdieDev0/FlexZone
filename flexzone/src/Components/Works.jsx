@@ -1,20 +1,39 @@
 import React from "react";
+import { motion, useAnimation } from "framer-motion";
 import object1 from "../assets/object1.png";
 import object2 from "../assets/object2.png";
 import object3 from "../assets/object3.png";
 import object4 from "../assets/object4.png";
 
 const Works = () => {
+  const controls = useAnimation();
+
+  React.useEffect(() => {
+    controls.start({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    });
+  }, [controls]);
+
   return (
     <div className="bg-gray-100 p-6 md:p-12 lg:p-20">
       <div>
-        <h1 className="text-center text-3xl md:text-4xl lg:text-6xl font-light mb-4 md:mb-6 lg:mb-10">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={controls}
+          className="text-center text-3xl md:text-4xl lg:text-6xl font-light mb-4 md:mb-6 lg:mb-10"
+        >
           How it works
-        </h1>
+        </motion.h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 mx-auto">
           {/* Box 1 */}
-          <div className="bg-gradient-to-tr from-gray-100 via-gray-200 to-pink-400 flex justify-between rounded-3xl px-5 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 items-center shadow-md">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={controls}
+            className="bg-gradient-to-tr from-gray-100 via-gray-200 to-pink-400 flex justify-between rounded-3xl px-5 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 items-center shadow-md"
+          >
             <div className="grid gap-2 md:gap-3 lg:gap-5 lg:w-80 md:w-60 w-52">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-300 via-pink-500 to-pink-700">
                 01
@@ -37,9 +56,13 @@ const Works = () => {
                 className="w-auto h-40 md:h-40 lg:h-72"
               />
             </div>
-          </div>
+          </motion.div>
           {/* Box 2 */}
-          <div className="bg-gradient-to-r from-gray-100 via-lime-100 to-lime-400 flex justify-between rounded-3xl px-5 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 items-center shadow-md">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={controls}
+            className="bg-gradient-to-r from-gray-100 via-lime-100 to-lime-400 flex justify-between rounded-3xl px-5 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 items-center shadow-md"
+          >
             <div className="grid gap-2 md:gap-3 lg:gap-5 lg:w-80 md:w-60 w-52">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-300 via-lime-500 to-lime-700">
                 02
@@ -62,9 +85,13 @@ const Works = () => {
                 className="w-auto h-40 md:h-40 lg:h-72 object-fill"
               />
             </div>
-          </div>
+          </motion.div>
           {/* Box 3 */}
-          <div className="bg-gradient-to-tr from-gray-100 via-gray-200 to-brown-400 flex justify-between rounded-3xl px-5 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 items-center shadow-md">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={controls}
+            className="bg-gradient-to-tr from-gray-100 via-gray-200 to-brown-400 flex justify-between rounded-3xl px-5 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 items-center shadow-md"
+          >
             <div className="grid gap-2 md:gap-3 lg:gap-5 lg:w-80 md:w-60 w-52">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-300 via-brown-500 to-brown-700">
                 03
@@ -86,9 +113,13 @@ const Works = () => {
                 className="w-auto h-36 md:h-40 lg:h-72"
               />
             </div>
-          </div>
+          </motion.div>
           {/* Box 4 */}
-          <div className="bg-gradient-to-tr from-gray-100 via-gray-200 to-teal-400 flex justify-between rounded-3xl px-5 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 items-center shadow-md">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={controls}
+            className="bg-gradient-to-tr from-gray-100 via-gray-200 to-teal-400 flex justify-between rounded-3xl px-5 md:px-8 lg:px-10 py-4 md:py-5 lg:py-6 items-center shadow-md"
+          >
             <div className="grid gap-2 md:gap-3 lg:gap-5 lg:w-80 md:w-60 w-52">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-300 via-teal-500 to-teal-700">
                 04
@@ -110,7 +141,7 @@ const Works = () => {
                 className="w-auto h-40 md:h-40 lg:h-72 object-fill"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
