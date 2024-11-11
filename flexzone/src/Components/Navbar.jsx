@@ -69,10 +69,10 @@ const Navbar = () => {
             placement="right"
             open={openRight}
             onClose={closeDrawerRight}
-            className="p- bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200"
+            className="p-4 bg-gradient-to-b from-gray-50 via-gray-100 to-orange-50"
           >
             {/* Sub module inside in menu burger */}
-            <div className="flex flex-col space-y-14">
+            <div className=" flex flex-col space-y-14">
               <div className="flex items-center justify-between">
                 <img src={gym} alt="/" className="size-16 cursor-pointer" />
                 <IconButton onClick={closeDrawerRight}>
