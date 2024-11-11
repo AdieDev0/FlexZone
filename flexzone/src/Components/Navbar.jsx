@@ -79,7 +79,7 @@ const Navbar = () => {
                   <RiCloseFill className="size-6 text-white/70" />
                 </IconButton>
               </div>
-              <ul className="flex flex-col gap-4 text-lg font-bold text-gray-800">
+              <ul className="flex flex-col gap-4 text-3xl font-bold text-gray-800">
                 <li className="cursor-pointer hover:text-stone-600 duration-100">
                   Home
                 </li>
