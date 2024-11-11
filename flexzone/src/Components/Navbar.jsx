@@ -9,7 +9,14 @@ import {
 } from "@material-tailwind/react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
-
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa";
+import { RiCloseFill } from "react-icons/ri";
 const Navbar = () => {
   const [openRight, setOpenRight] = React.useState(false);
   const openDrawerRight = () => setOpenRight(true);
@@ -17,7 +24,7 @@ const Navbar = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -31,20 +38,20 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:block md:block">
           <ul className="flex gap-10">
-            <li className="text-lg font-extrabold  cursor-pointer hover:text-stone-600 duration-100">
+            <li className="text-md font-extrabold cursor-pointer hover:text-stone-600 duration-100">
               Why FlexZone
             </li>
-            <li className="text-lg font-extrabold  cursor-pointer hover:text-stone-600 duration-100">
+            <li className="text-md font-extrabold cursor-pointer hover:text-stone-600 duration-100">
               Success Stories
             </li>
-            <li className="text-lg font-extrabold  cursor-pointer hover:text-stone-600 duration-100">
+            <li className="text-md font-extrabold cursor-pointer hover:text-stone-600 duration-100">
               Faqs
             </li>
           </ul>
         </div>
 
         <div className="flex items-center gap-5">
-        <motion.button 
+          <motion.button
             variants={itemVariants}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -62,42 +69,56 @@ const Navbar = () => {
             placement="right"
             open={openRight}
             onClose={closeDrawerRight}
-            className="p-4"
+            className="p-4 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200"
           >
-            <div className="mb-6 flex items-center justify-between">
-              <Typography variant="h5" color="blue-gray">
-                Material Tailwind
-              </Typography>
-              <IconButton
-                variant="text"
-                color="blue-gray"
-                onClick={closeDrawerRight}
+            {/* Sub module inside in menu burger */}
+            <div className="flex flex-col space-y-6">
+              <div className="flex items-center justify-between">
+                <img src={gym} alt="/" className="size-16 cursor-pointer" />
+                <IconButton onClick={closeDrawerRight}>
+                  <RiCloseFill className="size-6 text-white/70" />
+                </IconButton>
+              </div>
+              <ul className="flex flex-col gap-4 text-lg font-bold text-gray-800">
+                <li className="cursor-pointer hover:text-stone-600 duration-100">
+                  Home
+                </li>
+                <li className="cursor-pointer hover:text-stone-600 duration-100">
+                  Why FlexZone
+                </li>
+                <li className="cursor-pointer hover:text-stone-600 duration-100">
+                  Success Stories
+                </li>
+                <li className="cursor-pointer hover:text-stone-600 duration-100">
+                  FAQ
+                </li>
+              </ul>
+              <div className="border-t pt-4">
+                <ul className="flex flex-col gap-3 text-sm text-gray-600">
+                  <li className="cursor-pointer hover:text-stone-600">
+                    Support Center
+                  </li>
+                  <li className="cursor-pointer hover:text-stone-600">
+                    Contact Us
+                  </li>
+                  <li className="cursor-pointer hover:text-stone-600">
+                    Our Story
+                  </li>
+                </ul>
+              </div>
+              <div className="flex justify-center gap-4 mt-4 text-gray-600">
+                <FaFacebookF className="cursor-pointer hover:text-stone-600" />
+                <FaTwitter className="cursor-pointer hover:text-stone-600" />
+                <FaInstagram className="cursor-pointer hover:text-stone-600" />
+                <FaLinkedin className="cursor-pointer hover:text-stone-600" />
+                <FaYoutube className="cursor-pointer hover:text-stone-600" />
+              </div>
+              <Typography
+                variant="small"
+                className="text-center text-xs text-gray-500 mt-4"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </IconButton>
-            </div>
-            <Typography color="gray" className="mb-8 pr-4 font-normal">
-              Material Tailwind features multiple React and HTML components, all
-              written with Tailwind CSS classes and Material Design guidelines.
-            </Typography>
-            <div className="flex gap-2">
-              <Button size="sm" variant="outlined">
-                Documentation
-              </Button>
-              <Button size="sm">Get Started</Button>
+                Terms of Use, Privacy Policy & Cookie Policy
+              </Typography>
             </div>
           </Drawer>
         </div>
